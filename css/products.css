@@ -1,0 +1,157 @@
+:root {
+  --primary: #3B1E54;
+  --secondary: #9B7EBD;
+  --text: #D4BEE4;
+  --extra: #EEEEEE;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+.content .head {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(59,30,84,0.13);
+}
+
+.content .head img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+/* Navigation buttons (left & right) */
+.content .head .left,
+.content .head .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+/* Hover effect */
+.content .head .left:hover,
+.content .head .right:hover {
+    background: rgba(255,255,255,0.7);
+    color: #3B1E54;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Positioning each side */
+.content .head .left {
+    left: 16px;
+}
+
+.content .head .right {
+    right: 16px;
+}
+
+.products {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0 24px;
+    text-align: center; /* Keep section centered */
+    color: var(--text);
+}
+
+.products h1 {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    color: var(--extra);
+    text-align: left; /* Align "Dog Products" to the left */
+}
+
+.products .box {
+    display: inline-block;
+    width: 260px;
+    background: linear-gradient(180deg, var(--primary) 60%, var(--secondary) 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(59, 30, 84, 0.15);
+    padding: 20px;
+    margin: 16px;
+    vertical-align: top;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Align all text inside the box to the left */
+    border: 0.5px solid;
+}
+
+.products .box h2,
+.products .box h4 {
+    margin-left: 0; /* Ensure no extra left margin */
+}
+
+
+.products .box:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(59, 30, 84, 0.25);
+}
+
+.products .box h2 {
+    font-size: 1.4rem;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.products .box h4 {
+    font-size: 1rem;
+    color: var(--extra);
+    margin-bottom: 12px;
+}
+
+.products .box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid var(--text);
+}
+
+.products .box button {
+    background: var(--primary);
+    color: var(--extra);
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.products .box button:hover {
+    background: var(--text);
+    color: var(--primary);
+    transform: scale(1.05);
+}
+
+.products p a{
+    margin-top: 32px;
+    font-size: 1.1rem;
+    color: var(--extra);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.products p a:hover {
+    color: var(--secondary);
+}
