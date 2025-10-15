@@ -1,0 +1,318 @@
+/* =========================================================
+   🎨 COLOR PALETTE
+========================================================= */
+:root {
+  --primary: #3B1E54;
+  --secondary: #9B7EBD;
+  --text: #D4BEE4;
+  --extra: #EEEEEE;
+}
+
+/* =========================================================
+   🧱 GLOBAL STRUCTURE
+========================================================= */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+/* =========================================================
+   🏔️ HEADER SECTION
+========================================================= */
+.content .head {
+  width: 100%;
+  height: 600px;
+  padding: 48px 24px;
+  background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+  background-image: url('/img/dog.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(59, 30, 84, 0.13);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content .head h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--extra);
+  text-shadow: 0 2px 12px rgba(59, 30, 84, 0.18);
+  margin-bottom: 16px;
+}
+
+.content .head h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 1px 8px rgba(59, 30, 84, 0.1);
+  margin-bottom: 12px;
+}
+
+.content .head h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   🧭 INTRO SECTION
+========================================================= */
+.intro {
+  width: 95%;
+  min-height: 380px;
+  margin-top: 50px;
+  padding: 0 50px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.intro .intro-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(59, 30, 84, 0.13);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.intro .texts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.intro .first {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.intro .second {
+  flex: 1 1 0;
+  min-width: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background: rgba(59, 30, 84, 0.18);
+  border-radius: 14px;
+  padding: 24px 22px;
+  margin: 30px 0 0 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro .images {
+  width: 100%;
+  margin: 25px 0 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.intro .images img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid var(--text);
+  background: var(--secondary);
+  box-shadow: 0 4px 16px rgba(59, 30, 84, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.intro .images img:hover {
+  transform: scale(1.09) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(59, 30, 84, 0.22);
+  border-color: #fff;
+}
+
+/* Stylish divider after intro */
+.intro + hr {
+  border: none;
+  border-top: 3px solid var(--text);
+  width: 60%;
+  margin: 40px auto 32px;
+  opacity: 0.85;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  box-shadow: 0 2px 12px rgba(59, 30, 84, 0.1);
+}
+
+/* =========================================================
+   🌟 REVIEW SECTION
+========================================================= */
+.review_one {
+  max-width: 1100px;
+  margin: 48px auto 32px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  color: #fff;
+  background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(59, 30, 84, 0.13);
+}
+
+.review_one .image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid var(--text);
+  background: var(--secondary);
+  box-shadow: 0 2px 16px rgba(59, 30, 84, 0.18);
+}
+
+.review_one .texts {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.review_one .texts h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.review_one .texts h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.review_one .texts p {
+  font-size: 1.1rem;
+  color: var(--extra);
+  margin-bottom: 18px;
+}
+
+.review_one .review {
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.review_one .reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+.review_one .reviews > div {
+  flex: 1 1 0;
+  min-width: 160px;
+  max-width: 200px;
+  padding: 18px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(59, 30, 84, 0.1);
+}
+
+.review_one .reviews img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid var(--secondary);
+  background: #fff;
+}
+
+.review_one .reviews p {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.review_two {
+  max-width: 100%;
+  margin: 48px auto 32px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  color: #fff;
+  background-image: url('/img/dog1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(59, 30, 84, 0.13);
+}
+
+.review_two .reviews{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.review_two .reviews .review{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin-bottom: 18px;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.review_two .reviews .review img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid var(--secondary);
+    background: #fff;
+}

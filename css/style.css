@@ -1,0 +1,258 @@
+/* ============================
+   Global Color Palette & Base
+============================ */
+:root {
+	--primary: #3B1E54;
+	--secondary: #9B7EBD;
+	--text: #D4BEE4;
+	--extra: #EEEEEE;
+}
+
+body {
+	background: var(--primary);
+	color: var(--text);
+	font-family: "Gravitas One", serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ============================
+   Navbar
+============================ */
+.navbar {
+	background: var(--primary);
+	box-shadow: 0 2px 12px rgba(59,30,84,0.10);
+}
+
+.navbar-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
+	height: 64px;
+}
+
+.logo a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.logo img {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid var(--secondary);
+	background: var(--extra);
+	box-shadow: 0 2px 8px rgba(59,30,84,0.10);
+}
+
+/* Nav Links */
+.nav-list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 32px;
+	padding: 0;
+	gap: 16px;
+}
+
+.nav-list a {
+	color: var(--text);
+	text-decoration: none;
+	font-size: 18px;
+	padding: 8px 12px;
+	border-radius: 6px;
+	transition: background 0.3s, color 0.3s;
+}
+
+.nav-list a:hover {
+	background: var(--secondary);
+	color: var(--primary);
+}
+
+/* Auth Buttons */
+.auth-links {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.auth-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 120px;
+	height: 40px;
+	background: var(--secondary);
+	color: var(--extra);
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: none;
+	border-radius: 999px;
+	box-shadow: 0 2px 8px rgba(59,30,84,0.10);
+	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	border: none;
+	outline: none;
+	text-align: center;
+	padding: 0 24px;
+}
+
+.auth-circle:hover {
+	background: var(--text);
+	color: var(--primary);
+	box-shadow: 0 4px 16px rgba(59,30,84,0.18);
+}
+
+/* ============================
+   Footer Elements
+============================ */
+section .logoImage {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid var(--secondary);
+	background: var(--primary);
+	box-shadow: 0 2px 8px rgba(59,30,84,0.10);
+}
+
+.logos i {
+	color: var(--extra) !important;
+	margin: 0 8px;
+	transition: color 0.3s;
+}
+.logos i:hover {
+	color: var(--primary) !important;
+}
+
+/* ============================
+   Section Layouts
+============================ */
+section {
+	max-width: 1100px;
+	margin: 48px auto 32px auto;
+	padding: 48px 40px; /* fixed: inner padding applied properly */
+	background: linear-gradient(-180deg, var(--primary) 60%, var(--text) 100%);
+	border: 1px solid var(--text);
+	border-radius: 18px;
+	box-shadow: 0 4px 32px rgba(59,30,84,0.13);
+	color: var(--text);
+	position: relative;
+	z-index: 1;
+	box-sizing: border-box;
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+	color: white;
+	margin-top: 0;
+}
+
+section p, section li {
+	color: var(--extra);
+	line-height: 1.6;
+}
+
+/* Cards & Features */
+section .card, section .feature {
+	background: var(--secondary);
+	border-radius: 14px;
+	box-shadow: 0 2px 12px rgba(59,30,84,0.10);
+	padding: 24px 18px;
+	margin-bottom: 24px;
+	color: var(--extra);
+}
+
+/* Buttons */
+section a.btn, section .btn {
+	display: inline-block;
+	background: var(--secondary);
+	color: var(--primary);
+	padding: 10px 28px;
+	border-radius: 999px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	box-shadow: 0 2px 8px rgba(59,30,84,0.13);
+	margin-top: 10px;
+}
+section a.btn:hover, section .btn:hover {
+	background: var(--text);
+	color: var(--primary);
+	box-shadow: 0 4px 16px rgba(59,30,84,0.18);
+}
+
+/* ============================
+   Custom Layout Blocks
+============================ */
+.divOne {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 24px;
+	width: 100%;
+	padding: 24px;
+	box-sizing: border-box;
+}
+
+.divOne > div {
+	flex: 1 1 0;
+	min-width: 0;
+}
+
+.divOne > div:last-child {
+	align-self: flex-start;
+	margin-left: auto;
+}
+
+/* Divider */
+section hr {
+	border: none;
+	border-top: 3px solid var(--primary);
+	width: 40%;
+	margin: 15px auto;
+	opacity: 1;
+}
+
+/* Second Row Layout */
+.divTwo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 150px;
+	box-sizing: border-box;
+	color: var(--extra);
+}
+
+/* ============================
+   Responsive Adjustments
+============================ */
+@media (max-width: 768px) {
+	.navbar-content, .divTwo {
+		flex-direction: column;
+		padding: 0 24px;
+		text-align: center;
+	}
+	.divOne {
+		flex-direction: column;
+		padding: 16px;
+	}
+	.divTwo {
+		padding: 0 24px;
+	}
+	section {
+		padding: 32px 20px;
+	}
+}
