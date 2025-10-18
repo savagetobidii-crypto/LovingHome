@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/account.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/package.css">
     <title>Loving Home</title>
 </head>
 <body>
@@ -31,52 +31,61 @@
     </nav>
 
     <div class="content">
-        <h1>Packages</h1>
-        <p>Choose the package that best suits your needs and budget. We offer a variety of packages to help you find a loving home.</p>
-        <div class="packages">
-            <div class="package">
-                <h2>Day Package</h2>
-                <p class="price">$100/month</p>
-                <ul>
-                    <li>Two walks per day</li>
-                    <li>External play area</li>
-                    <li>Agility track</li>
-                    <li>Sand digging pit.</li>
-                </ul>
-                <a href="#" class="btn">Book Now</a>
+        <div class="login">
+            <div class="img"></div>
+            <form action="">
+            <h2>Login</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
             </div>
-            <div class="package">
-                <h2>Classic Package</h2>
-                <p class="price">$200/month</p>
-                <ul>
-                    <li>Three walks/activities per day</li>
-                    <li>External play areaa</li>
-                    <li>Agility track</li>
-                    <li>Sand digging pit.</li>
-                </ul>
-                <a href="#" class="btn">Book Now</a>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
             </div>
-            <div class="package">
-                <h2>Premium Package</h2>
-                <p class="price">$300/month</p>
-                <ul>
-                    <li>Four walks/activities per day</li>
-                    <li>Private grass area</li>
-                    <li>Daily updates/photos</li>
-                    <li>Treats (as agreed with owner).</li>
-                </ul>
-                <a href="#" class="btn">Book Now</a>
+            <div class="links">
+                <a href="#">Forgot Password</a>
             </div>
-            <div class="package">
-                <h2>Custom Package</h2>
-                <p class="price">Contact us for pricing</p>
-                <h5>
-                    For longer stays or for dogs with additional requirements. Clients must contact the company to arrange any custom packages.
-                </h5>
-            </div>
+            <input type="submit" value="Login">
+
+            <!-- Sign Up button inside the login box -->
+            </form>
+        </div>
+        <div class="signUp">
+            <form action="">
+                <h2>Sign Up</h2>
+                <div class="inputBox">
+                    <input type="text" required="required">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="email" required="required">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <span>Confirm Password</span>
+                    <i></i>
+                </div>
+                <input type="submit" value="Sign Up">
+            </form>
+            <div class="img"></div>
+        </div>
+        <button type="button" class="signup-btn">Sign Up</button>
+        <button type="button" class="login-btn">Login</button>
     </div>
 
-        <section>
+
+    <section>
         <div class="divOne">
             <div>
                 <img src="/img/logo.jpg" alt="logo" class="logoImage">
@@ -109,6 +118,6 @@
         </div>
     </section>
 
-    <script src="/js/main.js"></script>
+    <script src="/js/account.js"></script>
 </body>
 </html>

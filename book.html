@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Loving Home</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <a href="index.html"><img src="/img/logo.jpg" alt="logo"></a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Online Book</a></li>
+                <li><a href="package.html">Package</a></li>
+                <li><a href="products.html">Pet Products</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="account.html" class="auth-circle">Login/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Page Content -->
+    <div class="content">
+        <section class="booking-section">
+            <h2>Booking Record</h2>
+
+            <div class="booking-card">
+                <div class="booking-header">
+                    <span class="room-type">Premium</span>
+                </div>
+
+                <div class="date-section">
+                    <div class="date-box">
+                        <button class="date-btn">Check in Date/Time</button>
+                        <p>12/11/25 12:00PM</p>
+                    </div>
+
+                    <div class="arrow">⇄</div>
+
+                    <div class="date-box">
+                        <button class="date-btn">Check out Date/Time</button>
+                        <p>15/11/25 12:00PM</p>
+                    </div>
+                </div>
+
+                <p class="room-info">Room: 420</p>
+                <hr>
+
+                <div class="pet-info">
+                    <div class="pet-item">
+                        <i class="fa-solid fa-paw"></i> PetName
+                    </div>
+                    <div class="pet-item">
+                        <i class="fa-solid fa-user"></i> OwnerName
+                    </div>
+                    <div class="pet-item">
+                        <i class="fa-solid fa-dollar-sign"></i> 0.00
+                    </div>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </section>
+        <div class="book-btn-container">
+            <button class="book-btn">Book</button>
+        </div>
+        <div class="booking">
+            <form action="" class="pet">
+                <h2>Book Your Stay</h2>
+                <label for="pet-name">Pet Name:</label>
+                <input type="text" id="pet-name" name="pet-name" required>
+
+                <label for="Type-of-pet">Type of Pet:</label>
+                <input type="text" id="Type-of-pet" name="Type-of-pet" required>
+
+                <label for="Gender">Gender:</label>
+                <select id="Gender" name="Gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="package">Package:</label>
+                <select id="package" name="package" required>
+                    <option value="premium">Premium</option>
+                    <option value="classic">Classic</option>
+                    <option value="day">Day</option>
+                    <option value="custom">Custom</option>
+                </select>
+
+                <label for="events">would you like your pet to participate in events?</label>
+                <input type="checkbox" name="events" id="events">
+
+                <label for="duo">If you have two pets would you like them to live together?</label>
+                <input type="checkbox" name="duo" id="duo">
+
+                <label for="other-pet">Choose your other pet</label>
+                <select id="other-pet" name="other-pet">
+                    <option value="none">None</option>
+                    <option value="pet1">Pet 1</option>
+                    <option value="pet2">Pet 2</option>
+                    <option value="pet3">Pet 3</option>
+                </select>
+            </form>
+            <button class="continue-btn">Continue</button>
+            <form action="" class="owner">
+                <h2>Owner Information</h2>
+                <label for="owner-name">Owner Name:</label>
+                <input type="text" id="owner-name" name="owner-name" required>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <div>
+                    <label for="check-in">Check-in Date/Time:</label>
+                    <input type="datetime-local" id="check-in" name="check-in" required>
+
+                    <label for="check-out">Check-out Date/Time:</label>
+                    <input type="datetime-local" id="check-out" name="check-out" required>
+                </div>
+            </form>
+            <button class="pay"><a href="book.html">Done</a></button>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <section>
+        <div class="divOne">
+            <div>
+                <img src="/img/logo.jpg" alt="logo" class="logoImage">
+                <p>———————————</p>
+                <br><br><br>
+                <div class="logos">
+                    <i class="fa-brands fa-square-facebook fa-xl"></i>
+                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                    <i class="fa-brands fa-square-twitter fa-xl"></i>
+                </div>
+            </div>
+            <div>
+                <h2>Our Contact</h2>
+                <h3><i class="fa-solid fa-phone"></i> +1 234 567 890</h3>
+                <h2>Our Email</h2>
+                <h3><i class="fa-solid fa-envelope"></i> info@lovinghome.com</h3>
+            </div>
+            <div>
+                <h3>Our Services</h3>
+                <h4>Our Community</h4>
+                <h4>Support Network</h4>
+                <h4>Sunday Services</h4>
+                <h4>Peaceful Day</h4>
+            </div>
+        </div>
+        <hr>
+        <div class="divTwo">
+            <h4>© 2023 Loving Home. All rights reserved.</h4>
+            <h4>Terms & Conditions | Privacy Policy</h4>
+        </div>
+    </section>
+
+    <script src="/js/booking.js"></script>
+</body>
+</html>
