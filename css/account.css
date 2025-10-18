@@ -1,0 +1,238 @@
+:root {
+  --primary: #3B1E54;
+  --secondary: #9B7EBD;
+  --text: #D4BEE4;
+  --extra: #EEEEEE;
+  --accent: #c9a8ff;
+}
+
+/* General Page Setup */
+body {
+  font-family: "Playfair Display", serif;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  position: relative; /* needed for absolute positioning of forms and button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* Shared Form Styles */
+.login, .signUp {
+  position: absolute; /* stack on top of each other */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 950px;
+  height: 520px;
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.signUp {
+  opacity: 0;
+  pointer-events: none; /* hide by default */
+}
+
+/* Left side image */
+.login .img, .signUp .img {
+  flex: 1;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.login .img { background-image: url('/img/dog_9.jpg'); }
+.signUp .img { background-image: url('/img/dog_10.jpg'); }
+
+.login .img:hover, .signUp .img:hover {
+  transform: scale(1.03);
+}
+
+/* Right side form */
+.login form, .signUp form {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(59, 30, 84, 0.4);
+  border-radius: 0 20px 20px 0;
+}
+
+/* Heading */
+.login form h2, .signUp form h2 {
+  text-align: center;
+  color: var(--extra);
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/* Input Boxes */
+.inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 12px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--text);
+  color: var(--extra);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: var(--text);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+  top: -16px;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.3s;
+}
+
+.inputBox input:focus ~ i,
+.inputBox input:valid ~ i {
+  width: 100%;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.login input[type="submit"],
+.signUp input[type="submit"] {
+  background: var(--secondary);
+  border: none;
+  border-radius: 999px;
+  color: var(--extra);
+  font-size: 1.1rem;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.login input[type="submit"]:hover,
+.signUp input[type="submit"]:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* Signup Button (rotated) */
+.signup-btn {
+  position: absolute;
+  top: 300px;
+  left: 667px;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  background: var(--secondary);
+  color: var(--extra);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+  opacity: 1;
+}
+
+.signup-btn:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translate(-50%, -50%) rotate(90deg) scale(1.05);
+}
+
+.login-btn {
+  position: absolute;
+  top: 300px;
+  left: 787px;
+  transform: translate(-50%, -50%) rotate(90deg); /* match signup-btn style */
+  background: var(--secondary);
+  color: var(--extra);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+  opacity: 0; /* hidden by default */
+  pointer-events: none; /* hidden by default */
+}
+
+.login-btn:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translate(-50%, -50%) rotate(-90deg) scale(1.05);
+}
+
+
+section{
+    margin-top: 500px;
+}

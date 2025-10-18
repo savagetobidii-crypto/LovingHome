@@ -1,0 +1,290 @@
+:root {
+  --primary: #3B1E54;
+  --secondary: #9B7EBD;
+  --text: #D4BEE4;
+  --extra: #EEEEEE;
+}
+
+
+/* General Page Layout */
+body {
+  font-family: "Playfair Display", serif;
+  background: var(--primary);
+  margin: 0;
+  padding: 0;
+  color: var(--extra);
+}
+
+/* Booking Container */
+.booking-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.booking-container h2 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* Booking Card */
+.booking-card {
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 24px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Date Section */
+.date-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.date-box {
+  text-align: center;
+}
+
+.date-btn {
+  background: #dce2f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.room-info {
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+/* Pet Info Section */
+.pet-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pet-item {
+  flex: 1;
+  text-align: center;
+}
+
+.cancel-btn {
+  background: #b0c4de;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Book Button */
+.book-btn-container {
+  text-align: center;
+}
+
+.book-btn {
+  background: #9EF01A;
+  color: var(--primary);
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #8adb1a;
+}
+
+.booking {
+  width: 80%;
+  margin: 40px auto;
+  background: var(--secondary);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: var(--extra);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.booking {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.booking.show {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  pointer-events: auto;
+}
+
+
+
+/* Section Headings */
+.booking h2 {
+  color: var(--extra);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Form Styles */
+.booking form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--primary);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Labels */
+.booking label {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+/* Inputs & Selects */
+.booking input,
+.booking select {
+  padding: 10px 12px;
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--primary);
+  background: var(--secondary);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking input:focus,
+.booking select:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 8px var(--text);
+}
+
+/* Checkboxes */
+.booking input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  accent-color: var(--text);
+}
+
+/* Inline Date Section */
+.booking div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.booking div label {
+  flex: 1 1 45%;
+}
+
+/* Buttons */
+.booking button {
+  background: var(--text);
+  color: var(--primary);
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.booking button:hover {
+  background: var(--extra);
+  color: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* Initially hidden forms and pay button */
+.pet,
+.owner,
+.continue-btn,
+.pay{
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease, height 0.4s ease, transform 0.4s ease;
+}
+
+.pay a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+/* Show pet form */
+.pet.active {
+  opacity: 1;
+  height: auto;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Show owner form */
+.owner.active {
+  opacity: 1;
+  height: auto;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Show Continue button */
+.continue-btn.active {
+  opacity: 1;
+  height: auto;
+  pointer-events: auto;
+}
+
+/* Hide Continue button smoothly */
+.continue-btn.hide {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Show Pay button with owner */
+.pay.active {
+  opacity: 1;
+  height: auto;
+  pointer-events: auto;
+}
