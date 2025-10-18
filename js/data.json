@@ -1,0 +1,32 @@
+{
+  "bookings": [
+    {
+      "petName": "Buddy",
+      "typeOfPet": "Dog",
+      "gender": "Male",
+      "dateOfBirth": "12/06/2021",
+      "package": "Premium",
+      "participateInEvents": true,
+      "liveTogetherWithOtherPet": false,
+      "otherPet": null,
+      "ownerName": "John Doe",
+      "ownerNumber": "0812345678",
+      "checkIn": "12/11/2025 12:00",
+      "checkOut": "15/11/2025 12:00"
+    },
+    {
+      "petName": "Whiskers",
+      "typeOfPet": "Cat",
+      "gender": "Female",
+      "dateOfBirth": "05/03/2022",
+      "package": "Standard",
+      "participateInEvents": false,
+      "liveTogetherWithOtherPet": true,
+      "otherPet": "Fluffy",
+      "ownerName": "Jane Smith",
+      "ownerNumber": "0898765432",
+      "checkIn": "20/11/2025 14:00",
+      "checkOut": "23/11/2025 11:00"
+    }
+  ]
+}
