@@ -234,6 +234,7 @@
   font-size: 1.1rem;
   color: var(--extra);
   margin-bottom: 18px;
+  font-family: "Playfair Display", serif !important;
 }
 
 .review_one .review {
@@ -253,6 +254,7 @@
 
 .review_one .reviews > div {
   flex: 1 1 0;
+  font-family: "Playfair Display", serif !important;
   min-width: 160px;
   max-width: 200px;
   padding: 18px 16px;
@@ -262,6 +264,10 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 8px rgba(59, 30, 84, 0.1);
+}
+
+.review_one .reviews h3{
+  margin-top: 0px;
 }
 
 .review_one .reviews img {
@@ -282,6 +288,7 @@
 }
 
 .review_two {
+  font-family: "Playfair Display", serif !important;
   max-width: 100%;
   margin: 48px auto 32px;
   padding: 48px 32px;
