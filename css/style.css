@@ -207,14 +207,17 @@ section a.btn:hover, section .btn:hover {
 	box-sizing: border-box;
 }
 
-.divOne > div {
-	flex: 1 1 0;
+.divOne div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	min-width: 0;
 }
 
-.divOne > div:last-child {
-	align-self: flex-start;
-	margin-left: auto;
+.divOne div .logos{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 /* Divider */
