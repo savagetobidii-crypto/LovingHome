@@ -9,11 +9,15 @@
 
 /* General Page Layout */
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Gravitas One", serif;
   background: var(--primary);
   margin: 0;
   padding: 0;
   color: var(--extra);
+}
+
+.content{
+  font-family: "Playfair Display", serif;
 }
 
 /* Booking Container */
