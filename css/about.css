@@ -8,9 +8,7 @@
 
 /* Base layout */
 body {
-  background: var(--primary);
-  color: var(--text);
-  font-family: "Playfair Display", serif;
+  font-family: "Gravitas One", serif !important;
   margin: 0;
   padding: 0;
 }
