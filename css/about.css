@@ -88,6 +88,7 @@ body {
 
 /* Team Section */
 .team {
+   font-family: "Playfair Display", serif;
   max-width: 1200px;
   width: 100%;
   display: flex;
