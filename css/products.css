@@ -138,6 +138,11 @@
     transition: background 0.3s, transform 0.2s;
 }
 
+.products .box button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .products .box button:hover {
     background: var(--text);
     color: var(--primary);
