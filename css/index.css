@@ -298,7 +298,7 @@
   justify-content: center;
   gap: 48px;
   color: #fff;
-  background-image: url('/img/dog1.jpg');
+  background: var(--extra-bg);
   background-size: cover;
   background-position: center;
   border-radius: 24px;
