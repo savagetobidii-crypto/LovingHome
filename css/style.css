@@ -241,6 +241,10 @@ section hr {
 	color: var(--extra);
 }
 
+.divTwo h4{
+	text-align: center;
+}
+
 /* ============================
    Responsive Adjustments
 ============================ */
